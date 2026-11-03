@@ -40,3 +40,18 @@ export type Attendee = {
   photoURL: string;
   joinedAt?: string | null;
 };
+
+export const EVENT_TYPES = [
+  "Cleanup",
+  "Plantation",
+  "Donation",
+  "Education",
+  "Healthcare",
+  "Other",
+] as const;
+export type PublicStats = {
+  events: number;
+  volunteers: number;
+  communities: number;
+  joins: number;
+};
