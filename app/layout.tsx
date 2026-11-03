@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import {Plus_Jakarta_Sans} from "next/font/google"
+import { Provider } from "@/components/provider";
+import Navbar from "@/components/navbar";
 
 const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -27,7 +29,14 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body 
       className="min-h-screen bg-[#fafaf9] text-neutral-900 antialiased dark:bg-neutral-950 dark:text-neutral-100"
       >
-        {children}
+        <Provider>
+          <Navbar/>
+          <main
+          className="min-h-[70vh]"
+          >
+            {children}
+          </main>
+        </Provider>
       
       </body>
     </html>

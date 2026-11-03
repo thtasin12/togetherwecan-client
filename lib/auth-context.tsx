@@ -1,8 +1,7 @@
+"use client"
 import { createContext, ReactNode, useContext, useEffect, useState } from "react";
 import {api, ApiError} from "./api"
 import type {User} from "./types"
-import { promises } from "dns";
-import { payloadSearcher } from "recharts/types/chart/SunburstChart";
 
 type AuthContextValue = {
     user: User | null
