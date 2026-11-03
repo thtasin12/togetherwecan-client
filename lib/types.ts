@@ -33,3 +33,10 @@ export type CommunityEvent = {
     waitlistCount?: number
     createdAt?: string
 }
+
+export type Attendee = {
+  email: string;
+  name: string;
+  photoURL: string;
+  joinedAt?: string | null;
+};
