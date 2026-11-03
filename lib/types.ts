@@ -21,7 +21,7 @@ export type CommunityEvent = {
     eventType: EventType
     thumbnail: string
     location: string
-    data: string
+    date: string
     capacity?: number | null
     spotsLeft?: number | null
     isFull?: boolean

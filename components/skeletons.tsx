@@ -27,7 +27,7 @@ export function DetailsSkeleton() {
   return (
     <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6">
       <div className="h-5 w-32 animate-pulse rounded bg-neutral-200 dark:bg-neutral-800" />
-      <div className="mt-5 aspect-[21/9] w-full animate-pulse rounded-3xl bg-neutral-200 dark:bg-neutral-800" />
+      <div className="mt-5 aspect-21/9 w-full animate-pulse rounded-3xl bg-neutral-200 dark:bg-neutral-800" />
       <div className="mt-8 grid gap-8 lg:grid-cols-5">
         <div className="space-y-4 lg:col-span-3">
           <div className="h-8 w-3/4 animate-pulse rounded bg-neutral-200 dark:bg-neutral-800" />
