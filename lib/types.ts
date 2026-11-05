@@ -11,8 +11,8 @@ export type EventType =
   | "Plantation"
   | "Donation"
   | "Education"
-  | "Health"
-  | "Others"
+  | "Healthcare"
+  | "Other"
 
 export type CommunityEvent = {
     _id: string
@@ -49,9 +49,42 @@ export const EVENT_TYPES = [
   "Healthcare",
   "Other",
 ] as const;
+
 export type PublicStats = {
   events: number;
   volunteers: number;
   communities: number;
   joins: number;
 };
+
+export interface EventComment {
+  _id: string;
+  eventId: string;
+  userEmail: string;
+  authorName: string;
+  authorPhoto?: string;
+  body: string;
+  createdAt: string;
+}
+
+export interface Badge {
+  id: string;
+  label: string;
+  description: string;
+  earned: boolean;
+}
+
+export interface UserStats {
+  joined: number;
+  hosted: number;
+  volunteersReached: number;
+  saved: number;
+  comments: number;
+  waitlisted: number;
+  badges: Badge[];
+}
+
+export interface Promotion {
+  event: CommunityEvent;
+  promotedAt: string;
+}
