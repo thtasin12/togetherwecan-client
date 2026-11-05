@@ -1,7 +1,7 @@
 "use client";
 
-import { Protected } from "@/components/protected";
-import { EventForm } from "@/components/event-form";
+import { Protected } from "@/components/protected"
+import { EventForm } from "@/components/event-form"
 
 export default function CreateEventPage() {
   return (
@@ -20,5 +20,5 @@ export default function CreateEventPage() {
         </div>
       </div>
     </Protected>
-  );
+  )
 }
