@@ -49,7 +49,7 @@ export function AuthProvider({children}: {children: ReactNode}) {
             method: "POST",
             body: JSON.stringify({email, password})
         })
-        await refresh
+        await refresh()
     }
 
     const register = async(payload: {name: string; email: string; photoURL: string; password: string}) => {
@@ -60,10 +60,10 @@ export function AuthProvider({children}: {children: ReactNode}) {
         await refresh()
     }
 
-    const googleLogin = async(Credential: string) => {
+    const googleLogin = async(credential: string) => {
         await api("/api/auth/google", {
             method: "POST",
-            body: JSON.stringify({Credential})
+            body: JSON.stringify({credential})
         })
         await refresh()
     }
