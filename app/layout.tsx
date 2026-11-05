@@ -5,6 +5,7 @@ import {Plus_Jakarta_Sans} from "next/font/google"
 import { Provider } from "@/components/provider";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
+import { Suspense } from "react";
 
 const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -31,7 +32,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className="min-h-screen bg-[#fafaf9] text-neutral-900 antialiased dark:bg-neutral-950 dark:text-neutral-100"
       >
         <Provider>
-          <Navbar/>
+          <Suspense fallback={<div className="sticky top-0 z-50 h-16 border-b border-neutral-200/70 bg-white/75 backdrop-blur-xl dark:border-neutral-800/80 dark:bg-neutral-950/75" />}>
+            <Navbar/>
+          </Suspense>
           <main
           className="min-h-[70vh]"
           >

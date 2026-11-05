@@ -46,14 +46,14 @@ export const EVENT_STYLES: Record<EventType, EventStyle> = {
     soft: "bg-violet-50 dark:bg-violet-950/40",
     ring: "ring-violet-200 dark:ring-violet-900",
   },
-  Health: {
+  Healthcare: {
     icon: Stethoscope,
     badge: "bg-rose-100 text-rose-700 dark:bg-rose-950/70 dark:text-rose-300",
     solid: "bg-rose-500",
     soft: "bg-rose-50 dark:bg-rose-950/40",
     ring: "ring-rose-200 dark:ring-rose-900",
   },
-  Others: {
+  Other: {
     icon: Sparkles,
     badge: "bg-neutral-200 text-neutral-700 dark:bg-neutral-800 dark:text-neutral-300",
     solid: "bg-neutral-500",
@@ -63,5 +63,5 @@ export const EVENT_STYLES: Record<EventType, EventStyle> = {
 };
 
 export function eventStyle(type: EventType) {
-  return EVENT_STYLES[type] || EVENT_STYLES.Others;
+  return EVENT_STYLES[type] || EVENT_STYLES.Other;
 }

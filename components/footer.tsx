@@ -150,7 +150,7 @@ const Footer = () => {
       </div>
 
       <div className="relative border-t border-brand-900 py-5 text-center text-xs text-brand-300/70">
-        © {new Date().getFullYear()} TogetherWeCan — Built with care for the community.
+        © 2026 TogetherWeCan — Built with care for the community.
       </div>
     </footer>
   );

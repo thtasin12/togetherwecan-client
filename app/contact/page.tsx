@@ -28,17 +28,9 @@ import {
   SiX
 } from "react-icons/si";
 import { FaLinkedin as SiLinkedin } from "react-icons/fa";
-
 import { useAuth } from "@/lib/auth-context";
-
 import { Reveal } from "@/components/reveal";
-
 import { toast } from "sonner";
-
-
-
-
-
 
 
 const EMAIL = "hello@togetherwecan.org";
